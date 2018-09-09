@@ -3,19 +3,19 @@ Python Worx Landroid
 ====================
 
 
-.. image:: https://img.shields.io/pypi/v/pylandroid.svg
-        :target: https://pypi.python.org/pypi/pylandroid
+.. image:: https://img.shields.io/pypi/v/pylandroidcloud.svg
+        :target: https://pypi.python.org/pypi/pylandroidcloud
 
-.. image:: https://img.shields.io/travis/colinfrei/pylandroid.svg
-        :target: https://travis-ci.org/colinfrei/pylandroid
+.. image:: https://img.shields.io/travis/colinfrei/pylandroidcloud.svg
+        :target: https://travis-ci.org/colinfrei/pylandroidcloud
 
-.. image:: https://readthedocs.org/projects/pylandroid/badge/?version=latest
-        :target: https://pylandroid.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/pylandroidcloud/badge/?version=latest
+        :target: https://pylandroidcloud.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
-.. image:: https://pyup.io/repos/github/colinfrei/pylandroid/shield.svg
-     :target: https://pyup.io/repos/github/colinfrei/pylandroid/
+.. image:: https://pyup.io/repos/github/colinfrei/pylandroidcloud/shield.svg
+     :target: https://pyup.io/repos/github/colinfrei/pylandroidcloud/
      :alt: Updates
 
 
@@ -24,7 +24,7 @@ Small Python package to use the Worx Landroid API
 
 
 * Free software: MIT license
-* Documentation: https://pylandroid.readthedocs.io.
+* Documentation: https://pylandroidcloud.readthedocs.io.
 
 
 Features

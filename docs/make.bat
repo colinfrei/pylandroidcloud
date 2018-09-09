@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=pylandroid
+set SPHINXPROJ=pylandroidcloud
 
 if "%1" == "" goto help
 

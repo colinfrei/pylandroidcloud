@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Tests for `pylandroid` package."""
+"""Tests for `pylandroidcloud` package."""
 
 
 import unittest
 
-from pylandroid import pylandroid
+from pylandroidcloud import pylandroidcloud
 
 
-class TestPylandroid(unittest.TestCase):
-    """Tests for `pylandroid` package."""
+class Testpylandroidcloud(unittest.TestCase):
+    """Tests for `pylandroidcloud` package."""
 
     def setUp(self):
         """Set up test fixtures, if any."""

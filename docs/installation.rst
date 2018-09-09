@@ -12,7 +12,7 @@ To install Python Worx Landroid, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install pylandroid
+    $ pip install pylandroidcloud
 
 This is the preferred method to install Python Worx Landroid, as it will always install the most recent stable release.
 
@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/colinfrei/pylandroid
+    $ git clone git://github.com/colinfrei/pylandroidcloud
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/colinfrei/pylandroid/tarball/master
+    $ curl  -OL https://github.com/colinfrei/pylandroidcloud/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/colinfrei/pylandroid
-.. _tarball: https://github.com/colinfrei/pylandroid/tarball/master
+.. _Github repo: https://github.com/colinfrei/pylandroidcloud
+.. _tarball: https://github.com/colinfrei/pylandroidcloud/tarball/master
