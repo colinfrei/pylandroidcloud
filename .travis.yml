@@ -1,0 +1,18 @@
+language: python
+python:
+- 3.6
+- 3.5
+- 3.4
+- 2.7
+install: pip install -U tox-travis
+script: tox
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: colinfrei
+  password:
+    secure: 1wQ7Qx7OTtxqHfkUnCNzczrq9GJM3BR/JisJfbEog1BOhjDj3UUWxBwpJCXk9pBStRRHP2EvKGtjwIB+0n2E1kFaPmEy51UXtRPiAcG2f4vH1gO0plCu8RZ8lGF2vo+1mcXboIqbxnxu1iFNwjnFlMsRbYJLgBGOrkvexFnMrnvIXkQr/V06eW595WkHZxTKjyO6u0Q1B6bfrdMcPcUmWV9G4R2KXj8sFxT4F5D4bC0qIAhUwni4Q2Y7eqMu4svUIx54kSTnJD/VZWlyFKhuLNFUyrcDHD0pJkZbKf9WpKbgQK6JEdm+g/2kIIULRlCGpdvLItC7ragF927d/N3OEG/1jBKw6jLs5uZ2a5UI0m60K4vP33mhWOrkplkBJNtAjxxFZJ1CSEQNCkfDrQy8F0C7dOussSOqw+MeZ/TUm2Pe+iEKFRhUdX5eCzSSaTKLdDTvqmSHDYSPB3tO0CEXdhRJTQscZ5pLRkmKWDlHlXn4i0wdypDQCE5cLCLbz/ZWuQlcvLknN6wJZ+7Ft2im7jHZiMlGNVbBJge5EzQ+kziZN21h6ubadFt24yVbHActp/FO6vMNmt1Fitivsiu0POjiXP739dEPOuykVw3S6uZYS3cBWy31JOd0PVk/R1qYC5EXmDu8nN3Br+eMyg0s/GoIif7wOuaZYqLnYHpafmg=
+  on:
+    tags: true
+    repo: colinfrei/pylandroid
+    python: 3.6
