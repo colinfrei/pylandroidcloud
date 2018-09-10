@@ -27,13 +27,11 @@ class LandroidMower:
         with self.get_cert() as cert:
             self.mqttc.tls_set(certfile=cert)
 
-        _LOGGER.debug('before connect')
         connect_result = self.mqttc.connect(self.endpoint, port=8883, keepalive=600)
         if (connect_result):
             _LOGGER.error('Error connecting to MQTT: %s', error)
 
         self.mqttc.loop_start()
-        _LOGGER.debug('after connect')
 
     #API Calls
     def authenticate(self, username, password):
@@ -60,11 +58,17 @@ class LandroidMower:
     def forward_on_message(self, client, userdata, message):
         import json
 
-        _LOGGER.debug("Received message '" + str(message.payload)
+        json_message = message.payload.decode('utf-8')
+        _LOGGER.debug("Received message '" + json_message
                       + "' on topic '" + message.topic
                       + "' with QoS " + str(message.qos))
 
-        self.on_message(json.loads(message.payload))
+        try:
+            self.on_message(json_message)
+        except json.decoder.JSONDecodeError as e:
+            import sys
+            _LOGGER.error('Decoding JSON has failed')
+            _LOGGER.error(sys.exc_info()[0])
 
     def on_connect(self, client, userdata, flags, rc):
         client.subscribe('DB510/' + self.mac_address + '/commandOut')
@@ -75,7 +79,6 @@ class LandroidMower:
 
     def pause_mowing(self):
         self.mqttc.publish('DB510/' + self.mac_address + '/commandIn', '{"cmd":2}', qos=0, retain=False)
-
 
     def return_home(self):
         self.mqttc.publish('DB510/' + self.mac_address + '/commandIn', '{"cmd":3}', qos=0, retain=False)
