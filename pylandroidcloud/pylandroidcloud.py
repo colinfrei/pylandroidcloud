@@ -64,7 +64,7 @@ class LandroidMower:
                       + "' with QoS " + str(message.qos))
 
         try:
-            self.on_message(json_message)
+            self.on_message(json.loads(json_message))
         except json.decoder.JSONDecodeError as e:
             import sys
             _LOGGER.error('Decoding JSON has failed')
