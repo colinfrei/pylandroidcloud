@@ -4,4 +4,4 @@
 
 __author__ = """Colin Frei"""
 __email__ = 'git@colinfrei.com'
-__version__ = '0.1.5'
+__version__ = '0.1.6'
