@@ -1,2 +1,2 @@
 paho-mqtt==1.4.0
-pyOpenSSL==18.0.0
+pyOpenSSL==19.0.0
